@@ -1,0 +1,16 @@
+.logo__web {
+  font-family: Raleway, sans-serif;
+  @include font($fz: 26px, $lh: 1.19);
+  color: var(--main-logo-second);
+}
+.logo__studio {
+  font-family: Raleway, sans-serif;
+  @include font($fz: 26px, $lh: 1.19);
+}
+.logo__studio--white {
+  color: var(--third-logo-color);
+}
+
+.logo__studio--dark {
+  color: var(--second-logo-color);
+}

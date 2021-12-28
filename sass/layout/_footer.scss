@@ -1,0 +1,67 @@
+.footer {
+  background-color: var(--main-background-color);
+}
+.container--footer-position {
+  display: flex;
+  height: 252px;
+}
+//----FOOTER-LEFT----
+.footer-left {
+  height: 100%;
+  padding-top: 63px;
+  padding-bottom: 57px;
+}
+
+.footer-section__address {
+  margin-top: 20px;
+}
+.adress__item-adress {
+  margin-bottom: 9px;
+}
+.adress__adress {
+  font-style: normal;
+  @include font($fw: 400, $lh: 1.71);
+  color: var(--third-text-color);
+}
+.adress__mail {
+  font-style: normal;
+  @include font($fw: 400, $lh: 1.71);
+  color: var(--footer-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--assent-color);
+  }
+}
+.adress__tel {
+  font-style: normal;
+  @include font($fw: 400, $lh: 1.71);
+  color: var(--footer-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--assent-color);
+  }
+}
+
+.footer-section__footer-right {
+  height: 100%;
+  margin-left: 70px;
+  padding-top: 72px;
+  padding-bottom: 99px;
+}
+
+.adress__item-mail {
+  margin-bottom: 9px;
+}
+.networks-title {
+  font-style: normal;
+  @include font();
+  text-align: Left;
+  vertical-align: Top;
+  text-transform: uppercase;
+  color: var(--third-text-color);
+}
+.footer-right__networks-title {
+  margin-bottom: 21px;
+}

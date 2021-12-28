@@ -1,0 +1,100 @@
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.portfolio__filter-btn {
+  margin-right: -8px;
+  margin-bottom: 50px;
+}
+.portfolio__filter-btn {
+  margin-right: -8px;
+  margin-bottom: 50px;
+}
+.filter-btn {
+  display: flex;
+  justify-content: center;
+}
+.filter-btn__item {
+  margin-right: 8px;
+}
+.filter-btn__btn {
+  font-family: inherit;
+  display: block;
+  @include font($fw: 500, $fz: 16px, $lh: 1.62);
+  color: var(--second-text-color);
+  background-color: var(--batton-portfolio);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: var(--third-text-color);
+    background-color: var(--assent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+// PORTFOLIO-CARD
+
+.portfolio__portfolio-list {
+  margin: -15px;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-list__item {
+  flex-basis: calc((100% - 3 * 30px) / 3);
+  &:hover .overlay {
+    transform: translateY(0);
+  }
+  margin: 15px;
+}
+.portfolio-list__link {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+.portfolio-list__image-and-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-list__overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  @include font($fw: 400, $fz: 18px, $lh: 1.56);
+  color: var(--third-text-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  transform: translateY(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .portfolio-list__item:hover& {
+    transform: translateY(0);
+  }
+}
+
+.portfolio-list__title-text {
+  padding: 20px 24px;
+  border: solid 1px #eeeeee;
+}
+.portfolio-list__title {
+  @include font($fz: 18px, $lh: 2, $ls: 0.06em);
+  color: var(--second-title-color);
+}
+.portfolio-list__text {
+  @include font($fw: 400, $fz: 16px, $lh: 1.87);
+  color: var(--main-text-color);
+  margin-top: 4px;
+}

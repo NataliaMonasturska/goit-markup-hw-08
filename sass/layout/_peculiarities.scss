@@ -1,0 +1,35 @@
+.peculiarities {
+  padding-top: 97px;
+  padding-bottom: 97px;
+}
+.peculiarities-list__title {
+  @include font();
+  text-transform: uppercase;
+  color: var(--second-title-color);
+}
+.peculiarities-list__text {
+  @include font($fw: 400, $lh: 1.71);
+  color: var(--main-text-color);
+  margin-top: 10px;
+}
+
+.peculiarities-list {
+  display: flex;
+}
+.peculiarities-list__item {
+  width: 270px;
+  height: 251px;
+  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.peculiarities-list__images {
+  width: 270px;
+  height: 120px;
+  background-color: var(--fill-command);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  @include flexbox();
+}
