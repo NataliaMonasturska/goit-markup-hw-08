@@ -1,11 +1,17 @@
 .logo__web {
   font-family: Raleway, sans-serif;
-  @include font($fz: 26px, $lh: 1.19);
+  @include font($fz: 24px, $lh: 1.16);
   color: var(--main-logo-second);
+  @media screen and(min-width: 1200px) {
+    @include font($fz: 26px, $lh: 1.19);
+  }
 }
 .logo__studio {
   font-family: Raleway, sans-serif;
-  @include font($fz: 26px, $lh: 1.19);
+  @include font($fz: 24px, $lh: 1.16);
+  @media screen and(min-width: 1200px) {
+    @include font($fz: 26px, $lh: 1.19);
+  }
 }
 .logo__studio--white {
   color: var(--third-logo-color);

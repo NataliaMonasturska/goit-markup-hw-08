@@ -9,3 +9,26 @@
   align-items: $ai;
   justify-content: $jc;
 }
+@mixin visually-hidden(
+  $p: absolute,
+  $w: 1px,
+  $h: 1px,
+  $m: -1px,
+  $b: 0,
+  $p: 0,
+  $ws: nowrap,
+  $cp: inset(100%),
+  $c: rect(0, 0, 0, 0),
+  $o: hidden
+) {
+  position: $p;
+  width: $w;
+  height: $h;
+  margin: $m;
+  border: $b;
+  padding: $p;
+  white-space: $ws;
+  clip-path: $cp;
+  clip: $c;
+  overflow: $o;
+}

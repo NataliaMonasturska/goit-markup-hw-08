@@ -22,7 +22,7 @@
     <!--Верхняя линия-->
     <header class="header">
        
-        <div class="container container--header-position">
+        <div class="container header__container">
          <nav class="header__navigation navigation">
         <a class="navigation__logo logo link" href=""><span class="logo__web">Web</span><span class="logo__studio logo__studio--dark">Studio</span></a>
         <ul class="nav-list list">
@@ -39,15 +39,75 @@
          </nav>
          <div class="header__connect connect">
       <a class="connect__mail link" href="mailto:info@devstudio.com"> 
-          <svg class="connect__icon" width="16" height="12">
+          <svg class="connect__icon connect__icon--size-mail" >
                <use href="./images/icons.svg#icon-envelope"></use>
        </svg>
     info@devstudio.com</a>
       <a class="connect__tel link" href="tel:+380961111111">
-            <svg class="connect__icon" width="10" height="16">
+            <svg class="connect__icon connect__icon--size-tel" >
                 <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>
           +38 096 111 11 11</a>
+        </div>
+        <button type="button" class="open-menu-btn">
+            <svg class="open-menu-btn__svg" width="40" height="40">
+                <use href='./images/icons.svg#icon-menu_40px'></use>
+            </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden">
+          <div class="container container--relative">
+              <div class="mob-menu-top">
+        <button type="button" class="close-menu-btn">
+            <svg class="close-menu-btn__svg" width="40" height="40">
+                <use href='./images/icons.svg#icon-close_40px'></use>
+            </svg>
+        </button>
+        <ul class="nav-list-mob-menu list">
+            <li class="nav-list-mob-menu__item">
+                <a class="nav-list-mob-menu__link link current" href="./index.html">Студия</a>
+            </li>
+            <li class="nav-list-mob-menu__item">
+                <a class="nav-list-mob-menu__link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav-list-mob-menu__item">
+                <a class="nav-list-mob-menu__link link" href="">Контакты</a>
+            </li>
+        </ul>
+        </div>
+        <div class="mob-menu-bottom">
+        <div class="mob-menu__connect ">
+            <a class="mob-menu__tel link" href="tel:+380961111111">
+                +38 096 111 11 11</a>
+            <a class="mob-menu__mail link" href="mailto:info@devstudio.com">
+                info@devstudio.com</a>
+        </div>
+        <ul class="mob-menu-networks-list list">
+            <li class="mob-menu-networks-list__item">
+                <a href="" class="mob-menu-networks-list__link  ">
+                Instagram  
+                <div class="vertical-line"></div>
+                </a>
+               
+            </li>
+            <li class="mob-menu-networks-list__item">
+                <a href="" class="mob-menu-networks-list__link   ">
+                    Twitter
+                    <div class="vertical-line"></div>
+                </a>
+            </li>
+            <li class="mob-menu-networks-list__item">
+                <a href="" class="mob-menu-networks-list__link  ">
+                    Facebook
+                    <div class="vertical-line"></div>
+                </a>
+            </li>
+            <li class="mob-menu-networks-list__item">
+                <a href="" class="mob-menu-networks-list__link ">
+                LinkedIn</a>
+            </li>
+        </ul>
+        </div>
         </div>
       </div>
     </header>
@@ -104,41 +164,42 @@
         </ul>
         </div>
     </section>
-    <!--Чем мы занимаемся-->
+    <!--Чем мы занимаемся -->
      <section class="profiles">
-        <div class="container">
+        <div class="container ">
         <h2 class="profiles__section-title section-title">Чем мы занимаемся</h2>
         <ul class="profiles__profiles-list profiles-list list">
             <li class="profiles-list__item">
-                <img
-                    src="./images/box1.jpg"
-                    alt="разработчик пишет код"
-                    width="370"
-                    height="294" 
-                />
+                <picture>
+                    <source srcset="./images/profiles.images/profiles1.jpg  1x, 
+                                                                            ./images/profiles.images/profiles1-2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                    <img src="./images/profiles.images/profiles1-2x.jpg" alt="разработчик пишет код" />
+                </picture>
                 <div class="profiles-list__text-position">
                   <span class="profiles-list__text">Десктопные приложения</span>
                 </div>
              </li>
              <li class="profiles-list__item">
-                 
-                <img
-                    src="./images/box2.jpg"
-                    alt="дизайнер выбирает макет для мобильного приложения"
-                    width="370"
-                    height="294" 
-                />
+                <picture>
+                    <source
+                        srcset="./images/profiles.images/profiles2.jpg  1x, 
+                        ./images/profiles.images/profiles2-2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                    <img src="./images/profiles.images/profiles2-2x.jpg" alt="дизайнер выбирает макет для мобильного приложения" />
+                </picture>                                  
                 <div class="profiles-list__text-position">
                     <span class="profiles-list__text">Мобильные приложения</span>
                 </div>
              </li>
              <li class="profiles-list__item">
-                <img
-                    src="./images/box3.jpg"
-                    alt="дизайнер выбирает цвет"
-                    width="370"
-                    height="294" 
-                />
+                <picture>
+                    <source
+                        srcset="./images/profiles.images/profiles3.jpg  1x, 
+                         ./images/profiles.images/profiles3-2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                    <img src="./images/profiles.images/profiles3-2x.jpg" alt="дизайнер выбирает цвет" />
+                </picture>
                 <div class="profiles-list__text-position">
                     <span class="profiles-list__text">Дизайнерские решения</span>
                 </div>
@@ -146,20 +207,26 @@
          </ul>
         </div>
     </section>
-    <!--Наша команда-->
-    <section class="command">
+      <!--Наша команда-->
+     <section class="command">
         <div class="container">
             <h2 class="command__section-title section-title">Наша команда</h2>
             <ul class="command__command-list command-list list">
                <li class="command-list__item">
-                <img src="./images/employee1.jpg"
-                 alt="мужчина в коричневой рубашке" 
-                 width="270" 
-                 height="260" />
+                <picture>
+                    <source srcset="./images/command.images/employee1.jpg  1x, 
+                                                            ./images/command.images/employee1-2x.jpg 2x" media="(min-width: 1200px)">
+                    <source srcset="./images/command.images/employee1-tab.jpg  1x, 
+                                                                    ./images/command.images/employee1-tab-2x.jpg 2x" media="(min-width: 768px)">
+                    <source srcset="./images/command.images/employee1-mob.jpg  1x, 
+                                                                    ./images/command.images/employee1-mob-2x.jpg 2x" media="(min-width: 320px)">
+                    <img src="./images/command.images/employee1-mob-2x.jpg" alt="мужчина в коричневой рубашке" />
+                </picture>
+               
             <div class="command-list__titles-text">
             <h3 class="command-list__titles">Игорь Демьяненко</h3>
             <p lang="en" class="command-list__text">Product Designer</p>
-            <ul class="networks-list list">
+            <ul class="networks-list list"> 
                 <li class="networks-list__item">
                     <a href="" class="networks-list__link networks-list__link--for-light">
                         <svg class="networks-list__icon"
@@ -204,12 +271,15 @@
             </div>
          </li>
          <li  class="command-list__item">
-            <img
-            src="./images/employee2.jpg"
-            alt="девушка в сером жакете"
-            width="270"
-            height="260"
-            />
+            <picture>
+                <source srcset="./images/command.images/employee2.jpg  1x, 
+                                            ./images/command.images/employee2-2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./images/command.images/employee2-tab.jpg  1x, 
+                                                    ./images/command.images/employee2-tab-2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./images/command.images/employee2-mob.jpg  1x, 
+                                                    ./images/command.images/employee2-mob-2x.jpg 2x" media="(min-width: 320px)">
+                <img src="./images/command.images/employee2-mob-2x.jpg" alt="девушка в сером жакете" />
+            </picture>
             <div class="command-list__titles-text">
             <h3 class="command-list__titles">Ольга Репина</h3>
             <p lang="en" class="command-list__text">Frontend Developer</p>
@@ -250,12 +320,15 @@
             </div>
          </li>
          <li  class="command-list__item">
-            <img
-            src="./images/employee3.jpg"
-            alt="мужчина в голубой рубашке"
-            width="270"
-            height="260"
-            />
+                    <picture>
+                        <source srcset="./images/command.images/employee3.jpg  1x, 
+                                                    ./images/command.images/employee3-2x.jpg 2x" media="(min-width: 1200px)">
+                        <source srcset="./images/command.images/employee3-tab.jpg  1x, 
+                                                            ./images/command.images/employee3-tab-2x.jpg 2x" media="(min-width: 768px)">
+                        <source srcset="./images/command.images/employee3-mob.jpg  1x, 
+                                                            ./images/command.images/employee3-mob-2x.jpg 2x" media="(min-width: 320px)">
+                        <img src="./images/command.images/employee3-mob-2x.jpg" alt="мужчина в голубой рубашке" />
+                    </picture>
             <div class="command-list__titles-text">
             <h3 class="command-list__titles">Николай Тарасов</h3>
             <p lang="en" class="command-list__text">Marketing</p>
@@ -296,12 +369,18 @@
             </div>
          </li>
          <li  class="command-list__item">
-            <img 
-            src="./images/employee4.jpg" 
-            alt="мужчина в черной рубашке"
-            width="270"
-            height="260" 
-            />
+            <picture>
+                <source srcset="./images/command.images/employee4.jpg  1x, 
+                                                        ./images/command.images/employee4-2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./images/command.images/employee4-tab.jpg  1x, 
+                                                                ./images/command.images/employee4-tab-2x.jpg 2x"
+                    media="(min-width: 768px)">
+                <source srcset="./images/command.images/employee4-mob.jpg  1x, 
+                                                                ./images/command.images/employee4-mob-2x.jpg 2x"
+                    media="(min-width: 320px)">
+                <img src="./images/command.images/employee4-mob-2x.jpg" alt="мужчина в черной рубашке" />
+            </picture>
+            
             <div class="command-list__titles-text">
             <h3 class="command-list__titles">Михаил Ермаков</h3>
             <p lang="en" class="command-list__text">UI Designer</p>
@@ -343,9 +422,8 @@
             </li>
     </ul>
     </div>
-    </section>
-
-<!--ПОСТОЯННЫЕ КЛИЕНТЫ-->
+    </section> 
+<!-- ПОСТОЯННЫЕ КЛИЕНТЫ -->
 <section class="clients">
     <div class="container">
     <h2 class="section-title clients__section-title">Постоянные клиенты</h2>
@@ -406,90 +484,83 @@
      </li>
     </ul>
     </div>
-</section>
+</section> 
 </main>
 <!--FOOTER-->
 <footer class="footer">
-    <section class="footer-section" >
-        <h2 class="visually-hidden">FOOTER</h2>
-    <div class=" container container--footer-position">
+    <section class="footer-section">
+        <div class=" container container--footer-position">
+            <div class="left-right-position">
+                <div class="footer-section__footer-left footer-left">
+                    <a class="logo footer-left__logo      link" href=""><span class="logo__web">Web</span><span
+                            class="logo__studio logo__studio--white">Studio</span></a>
+                    <address class="footer-section__address  address">
+                        <ul class=" address__list list">
+                            <li class="adress__item-adress">
+                                <a class="link adress__adress " href="https://goo.gl/maps/9Tbaq5ULYDooVJVK9"
+                                    target="_blank" rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a>
+                            </li>
+                            <li class="adress__item-mail">
+                                <a class="link adress__mail" href="mailto:info@example.com">info@example.com</a>
+                            </li>
+                            <li class="adress__item-tel">
+                                <a class="link adress__tel" href="tel:+380991111111">+38 099 111 11 11</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="footer-section__footer-right  footer-right">
+                    <h3 class="footer-right__networks-title networks-title">присоединяйтесь</h3>
+                    <ul class="networks-list list">
+                        <li class="networks-list__item">
+                            <a href="" class="networks-list__link networks-list__link--for-dark">
+                                <svg class="networks-list__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-instagram">
+                                    </use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="networks-list__item">
+                            <a href="" class="networks-list__link networks-list__link--for-dark">
+                                <svg class="networks-list__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-twitter">
 
-        <div class="footer-section__footer-left footer-left"> 
-    <a class="logo link" href=""><span class="logo__web">Web</span><span class="logo__studio logo__studio--white">Studio</span></a>
-    <address class="footer-section__address  address">
-        <ul class=" address__list list">
-            <li class="adress__item-adress">
-                <a class="link adress__adress " href="https://goo.gl/maps/9Tbaq5ULYDooVJVK9"
-                target="_blank"
-                rel="noopener noreferrer"
-                >г. Киев, пр-т Леси Украинки, 26</a
-                >
-            </li>
-            <li class="adress__item-mail">
-                <a class="link adress__mail" href="mailto:info@example.com">info@example.com</a>
-            </li>
-            <li class="adress__item-tel">
-                <a class="link adress__tel" href="tel:+380991111111">+38 099 111 11 11</a>
-            </li>
-        </ul>
-    </address>
-    </div>
-    <div class="footer-section__footer-right  footer-right"> 
-        <h3 class="footer-right__networks-title networks-title">присоединяйтесь</h3>
-    <ul class="networks-list list">
-        <li class="networks-list__item">
-            <a href="" class="networks-list__link networks-list__link--for-dark">
-                <svg class="networks-list__icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-instagram">
-                    </use>
-                </svg>
-            </a>
-        </li>
-        <li class="networks-list__item">
-            <a href="" class="networks-list__link networks-list__link--for-dark">
-                <svg class="networks-list__icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-twitter">
-    
-                    </use>
-                </svg></a>
-        </li>
-        <li class="networks-list__item">
-            <a href="" class="networks-list__link networks-list__link--for-dark">
-                <svg class="networks-list__icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-facebook">
-    
-                    </use>
-                </svg></a>
-        </li>
-        <li class="networks-list__item">
-            <a href="" class="networks-list__link networks-list__link--for-dark">
-                <svg class="networks-list__icon" width="20" height="20">
-                    <use href="./images/icons.svg#icon-linkedin">
-    
-                    </use>
-                </svg></a>
-        </li>
-    </ul>
-    </div>
-    <div class="footer-section__subscribe subscribe">
-        <h3 class="subscribe__subscribe-title subscribe-title">Подпишитесь на рассылку</h3>
-        <form action="#" class="subscribe-form">
-            <input 
-            type="email" 
-            class="subscribe-form__input"
-            name="subscribe-email"
-            placeholder="E-mail"
-            >
-            <button class="subscribe-form__btn btn" type="submit">
-                <span class="btn-label">Подписаться</span>  
-                <svg class="subscribe-form__icon-btn" width="24" height="24">
-                    <use href="./images/icons.svg#icon-btn"></use>
-                </svg>
-            </button>
+                                    </use>
+                                </svg></a>
+                        </li>
+                        <li class="networks-list__item">
+                            <a href="" class="networks-list__link networks-list__link--for-dark">
+                                <svg class="networks-list__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-facebook">
 
-        </form>
-    </div>
-    </div>
+                                    </use>
+                                </svg></a>
+                        </li>
+                        <li class="networks-list__item">
+                            <a href="" class="networks-list__link networks-list__link--for-dark">
+                                <svg class="networks-list__icon" width="20" height="20">
+                                    <use href="./images/icons.svg#icon-linkedin">
+
+                                    </use>
+                                </svg></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-section__subscribe subscribe">
+                <h3 class="subscribe__subscribe-title subscribe-title">Подпишитесь на рассылку</h3>
+                <form action="#" class="subscribe-form">
+                    <input type="email" class="subscribe-form__input" name="subscribe-email" placeholder="E-mail">
+                    <button class="subscribe-form__btn btn" type="submit">
+                        <span class="btn-label">Подписаться</span>
+                        <svg class="subscribe-form__icon-btn" width="24" height="24">
+                            <use href="./images/icons.svg#icon-btn"></use>
+                        </svg>
+                    </button>
+
+                </form>
+            </div>
+        </div>
     </section>
 </footer>
 <div class="backdrop is-hidden" data-modal>
@@ -583,6 +654,7 @@
     </div>
 </div>
 <script src="./js/modal.js"></script>
+<script src="./js/menu.js"></script>
 </body>
 </html>
 

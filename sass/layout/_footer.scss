@@ -2,21 +2,49 @@
   background-color: var(--main-background-color);
 }
 .container--footer-position {
-  display: flex;
-  height: 252px;
+  @media screen and(min-width: 1200px) {
+    display: flex;
+    height: 252px;
+  }
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.left-right-position {
+  @media screen and(min-width: 768px) {
+    display: flex;
+  }
 }
 //----FOOTER-LEFT----
+// .footer-section__footer-left {
+//   // margin: 0 auto;
+// }
 .footer-left {
-  height: 100%;
-  padding-top: 63px;
-  padding-bottom: 57px;
+  // padding-top: 63px;
+  // padding-bottom: 57px;
+  @media screen and(max-width: 1199px) {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+
+  @media screen and(min-width: 768px) {
+    padding-right: 170px;
+    padding-left: 72px;
+  }
+  @media screen and(min-width: 1200px) {
+    padding-right: 85px;
+    padding-left: 0px;
+    height: 100%;
+  }
 }
 
 .footer-section__address {
   margin-top: 20px;
 }
 .adress__item-adress {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 .adress__adress {
   font-style: normal;
@@ -44,24 +72,41 @@
   }
 }
 
-.footer-section__footer-right {
-  height: 100%;
-  margin-left: 70px;
-  padding-top: 72px;
-  padding-bottom: 99px;
+// .footer-section__footer-right {
+//   // height: 100%;
+//   // margin-left: 70px;
+//   // padding-top: 72px;
+//   // padding-bottom: 99px;
+// }
+.footer-right {
+  padding-bottom: 60px;
+  @media screen and(min-width: 768px) {
+    padding-right: 74px;
+    padding-top: 5px;
+  }
+  @media screen and(min-width: 1200px) {
+    padding-right: 93px;
+    padding-top: 12px;
+    padding-bottom: 40px;
+  }
 }
 
 .adress__item-mail {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 .networks-title {
   font-style: normal;
   @include font();
-  text-align: Left;
+  @media screen and(max-width: 1199px) {
+    text-align: center;
+  }
   vertical-align: Top;
   text-transform: uppercase;
   color: var(--third-text-color);
 }
 .footer-right__networks-title {
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 }

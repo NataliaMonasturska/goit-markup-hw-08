@@ -1,5 +1,8 @@
 .section-title {
   text-align: center;
-  @include font($fz: 36px, $lh: 1.16);
+  @include font($fz: 28px, $lh: 1.17);
   color: var(--second-title-color);
+  @media screen and(min-width: 1200px) {
+    @include font($fz: 36px, $lh: 1.16);
+  }
 }

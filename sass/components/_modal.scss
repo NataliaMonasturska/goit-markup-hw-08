@@ -24,8 +24,18 @@
   font-style: normal;
   text-align: center;
   @include font($fz: 20px, $lh: 1.15);
-  width: 528px;
-  min-height: 581px;
+  @media screen and(min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
+  }
+  @media screen and(max-width: 1199px) {
+    width: calc(100% - 30px);
+    max-width: 450px;
+    min-height: 609px;
+  }
+  @media screen and(max-width: 479px) {
+    width: calc(100%);
+  }
   background-color: #fff;
   border-radius: 4px;
   position: absolute;
@@ -60,7 +70,11 @@
 .modal__title {
   font-family: Roboto;
   font-style: normal;
-  @include font($fz: 20px, $lh: 1.15);
+  @include font($fz: 20px, $lh: 1.5);
+  @media screen and(min-width: 1200px) {
+    @include font($fz: 20px, $lh: 1.15);
+  }
+
   color: var(--second-title-color);
   background-color: #fff;
   display: block;
@@ -146,7 +160,17 @@
 }
 
 .check-polisy__text {
-  @include font($fw: 400, $lh: 1.71);
+  @include font($fw: 400, $fz: 12px, $lh: 1.16);
+  @media screen and(min-width: 1200px) {
+    @include font($fw: 400, $lh: 1.71);
+  }
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  letter-spacing: 0.03em;
   color: var(--main-text-color);
   @include flexbox();
 }
@@ -163,9 +187,12 @@
 .check-polisy__icon {
   fill: var(--main-btn-color);
 }
-
 .check-polisy__link {
-  @include font($fw: 400, $lh: 1.71);
+  @include font($fw: 400, $fz: 12px, $lh: 1.16);
+  @media screen and(min-width: 1200px) {
+    @include font($fw: 400, $lh: 1.71);
+  }
+
   text-decoration-line: underline;
   color: var(--assent-color);
   margin-left: 4px;
