@@ -56,10 +56,11 @@
     flex-wrap: wrap;
   }
 }
-.header__connect {
+.container-for-block {
   display: block;
   margin-left: auto;
 }
+// s
 .connect__mail {
   @include font($fw: 500, $fz: 12px, $lh: 1.16, $ls: 0.02em);
   @media screen and(min-width: 1200px) {

@@ -710,7 +710,8 @@ body {
   }
 }
 
-.header__connect {
+.container-for-block {
+  display: block;
   margin-left: auto;
 }
 
