@@ -55,10 +55,9 @@
     display: flex;
     flex-wrap: wrap;
   }
-}
-.container-for-block {
   padding-left: 82.4px;
 }
+
 .connect__mail {
   @include font($fw: 500, $fz: 12px, $lh: 1.16, $ls: 0.02em);
   @media screen and(min-width: 1200px) {
