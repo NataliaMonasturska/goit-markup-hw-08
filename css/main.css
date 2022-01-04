@@ -711,8 +711,7 @@ body {
 }
 
 .container-for-block {
-  display: block;
-  margin-left: auto;
+  padding-left: auto;
 }
 
 .connect__mail {
