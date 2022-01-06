@@ -71,9 +71,6 @@
 
 .portfolio-list__item {
   width: 100%;
-  img {
-    width: 100%;
-  }
   margin: 15px;
   @media screen and(min-width: 768px) {
     flex-basis: calc(100% / 2 - 30px);
